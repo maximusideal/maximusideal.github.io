@@ -1,0 +1,23 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+const formatDate = (date: Date) => date.toLocaleDateString('en-US', {
+  month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+});
+---
+
+<PageLayout title="Blog" active="Blog">
+  <div class="blog-list">
+    {posts.map((post) => (
+      <article class="post-preview">
+        <h2><a href={`/blog/${post.id}/`}>{post.data.title}</a></h2>
+        <p class="post-meta">{formatDate(post.data.date)}; {post.data.category}</p>
+        <p>{post.data.excerpt}</p>
+      </article>
+    ))}
+  </div>
+</PageLayout>

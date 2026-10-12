@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post }
+  }));
+}
+
+interface Props { post: CollectionEntry<'blog'>; }
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = post.data.date.toLocaleDateString('en-US', {
+  month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+});
+---
+
+<PageLayout title={post.data.title} active="Blog">
+  <article class="post-page">
+    <h1>{post.data.title}</h1>
+    <p class="post-meta">{date}; {post.data.category}</p>
+    <div class="post-body"><Content /></div>
+    <a class="back-link" href="/blog/">← Back to blog</a>
+  </article>
+</PageLayout>

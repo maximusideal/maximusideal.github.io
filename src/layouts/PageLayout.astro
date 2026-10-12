@@ -1,0 +1,42 @@
+---
+import '../styles/site.css';
+
+interface Props {
+  title: string;
+  active: 'Home' | 'Blog' | 'Project' | 'About';
+}
+
+const { title, active } = Astro.props;
+const tabs = [
+  { name: 'Home', href: '/' },
+  { name: 'Blog', href: '/blog/' },
+  { name: 'Project', href: '/projects/' },
+  { name: 'About', href: '/about/' }
+] as const;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#262d43" />
+    <title>{title} | MaximusIdeal</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="tabs" aria-label="Main navigation">
+        {tabs.map((tab) => (
+          <a
+            href={tab.href}
+            class:list={{ active: active === tab.name }}
+            aria-current={active === tab.name ? 'page' : undefined}
+          >{tab.name}</a>
+        ))}
+      </nav>
+    </header>
+    <main class="page-content">
+      <slot />
+    </main>
+  </body>
+</html>
