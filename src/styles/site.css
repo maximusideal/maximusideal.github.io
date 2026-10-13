@@ -64,7 +64,7 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
 .simple-page p { margin: 20px 0 0; }
 
 .blog-list { max-width: 740px; }
-.post-preview { margin-bottom: 86px; }
+.post-preview { margin-bottom: 40px; }
 .post-preview h2 { font-size: 26px; font-weight: 600; line-height: 1.3; margin: 0 0 14px; }
 .post-preview h2 a { color: inherit; text-decoration: none; }
 .post-preview h2 a:hover,
