@@ -10,7 +10,6 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
 
 .site-header {
   background: #653CBE;
-  border-bottom: 2px solid #1b2235;
   min-height: 142px;
   display: flex;
   align-items: flex-end;
@@ -19,7 +18,7 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
 .tabs {
   display: flex;
   align-items: flex-end;
-  gap: 7px;
+  gap: 0px;
   width: min(100%, 900px);
   margin: 0 auto;
   padding: 0 22px;
