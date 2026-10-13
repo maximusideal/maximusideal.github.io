@@ -5,7 +5,8 @@ A small Astro site for GitHub Pages.
 ## Pages
 
 - Home: `src/pages/index.astro`
-- Blog: `src/pages/blog/index.astro`
+- Blog previews: `src/pages/blog/index.astro`
+- Blog post list: `src/pages/blog/posts/index.astro` (at `/blog/posts/`)
 - Projects: `src/pages/projects.astro`
 - About: `src/pages/about.astro`
 
@@ -23,6 +24,6 @@ npm run dev
 
 Add a Markdown file to `src/content/blog/`, using the existing samples as templates.
 Each post needs a title, date, category, and excerpt in frontmatter.
-The blog index lists the posts newest first, and titles open individual post pages.
+The blog post list at `/blog/posts/` lists titles and dates newest first, with links to individual post pages.
 
 Push to `main` to deploy using GitHub Actions (Settings → Pages → GitHub Actions).
