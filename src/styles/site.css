@@ -18,7 +18,7 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
 .tabs {
   display: flex;
   align-items: flex-end;
-  gap: 0px;
+  gap: 0;
   width: min(100%, 900px);
   margin: 0 auto;
   padding: 0 22px;
@@ -35,10 +35,16 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
 }
 
 .tabs a:hover,
-.tabs a:focus-visible { text-decoration: underline; }
-.tabs a.active {
-  background: #465574;
+.tabs a:focus-visible {
+  background: #394863;
   text-decoration: none;
+}
+.tabs a.active {
+  background: #596b8a;
+  text-decoration: none;
+}
+.tabs a.active:hover {
+  background: #596b8a;
 }
 
 .page-content {
