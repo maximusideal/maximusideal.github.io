@@ -36,15 +36,15 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
 
 .tabs a:hover,
 .tabs a:focus-visible {
-  background: #394863;
+  background: #42277C;
   text-decoration: none;
 }
 .tabs a.active {
-  background: #596b8a;
+  background: #8157CC;
   text-decoration: none;
 }
 .tabs a.active:hover {
-  background: #596b8a;
+  background: #42277C;
 }
 
 .page-content {
