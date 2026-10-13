@@ -65,11 +65,21 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
 
 .blog-list { max-width: 740px; }
 .post-preview { margin-bottom: 40px; }
-.post-preview h2 { font-size: 26px; font-weight: 600; line-height: 1.3; margin: 0 0 14px; }
-.post-preview h2 a { color: inherit; text-decoration: none; }
-.post-preview h2 a:hover,
-.post-preview h2 a:focus-visible { text-decoration: underline; }
-.post-meta { color: #444; font-size: 15px; margin: 0 0 24px; }
+.post-preview h2 { font-size: 26px; font-weight: 600; line-height: 1.3; margin: 0 0 7px; }
+.post-preview-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: -8px -12px 6px;
+}
+.post-preview-link:hover,
+.post-preview-link:focus-visible {
+  background: #f3edfc;
+  box-shadow: inset 0 0 0 1px #d6c4f2;
+}
+.post-meta { color: #444; font-size: 15px; margin: 0 0 14px; }
+.post-preview-link .post-meta { margin-bottom: 0; }
 .post-preview > p:last-child { margin: 0; }
 .post-page { max-width: 740px; }
 .post-page h1 { font-size: 30px; line-height: 1.3; margin: 0 0 14px; }

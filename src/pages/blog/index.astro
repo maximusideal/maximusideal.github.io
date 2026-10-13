@@ -14,8 +14,10 @@ const formatDate = (date: Date) => date.toLocaleDateString('en-US', {
   <div class="blog-list">
     {posts.map((post) => (
       <article class="post-preview">
-        <h2><a href={`/blog/${post.id}/`}>{post.data.title}</a></h2>
-        <p class="post-meta">{formatDate(post.data.date)}; {post.data.category}</p>
+        <a class="post-preview-link" href={`/blog/${post.id}/`}>
+          <h2>{post.data.title}</h2>
+          <p class="post-meta">{formatDate(post.data.date)}; {post.data.category}</p>
+        </a>
         <p>{post.data.excerpt}</p>
       </article>
     ))}
