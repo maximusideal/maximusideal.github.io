@@ -11,6 +11,9 @@ const formatDate = (date: Date) => date.toLocaleDateString('en-US', {
 ---
 
 <PageLayout title="Blog post list" active="Blog">
+  <nav class="blog-post-list-return" aria-label="Blog navigation">
+    <a href="/blog/">← Back to blog</a>
+  </nav>
   <nav class="blog-post-list" aria-label="Blog post list">
     <ul>
       {posts.map((post) => (

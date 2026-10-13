@@ -127,3 +127,9 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
 .blog-post-list a:hover,
 .blog-post-list a:focus-visible { text-decoration: underline; }
 .blog-post-list time { color: #111; font-size: 15px; white-space: nowrap; text-align: right; }
+
+/* Return link above the compact blog post list. */
+.blog-post-list-return { max-width: 740px; margin: 0 0 24px; }
+.blog-post-list-return a { color: #653CBE; text-decoration: none; font-size: 15px; }
+.blog-post-list-return a:hover,
+.blog-post-list-return a:focus-visible { text-decoration: underline; }
