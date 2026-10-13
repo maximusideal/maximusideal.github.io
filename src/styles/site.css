@@ -95,3 +95,23 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
   .post-preview { margin-bottom: 66px; }
   .post-preview h2 { font-size: 23px; }
 }
+
+/* The index is intentionally plain: titles are the focus. */
+.blog-index-navigation { max-width: 740px; text-align: right; margin: -18px 0 30px; }
+.blog-index-navigation a { color: #653CBE; text-decoration: none; font-size: 15px; }
+.blog-index-navigation a:hover,
+.blog-index-navigation a:focus-visible { text-decoration: underline; }
+.blog-index { max-width: 740px; }
+.blog-index h1 { font-size: 28px; margin: 0 0 26px; }
+.blog-index .blog-index-navigation { text-align: left; margin: 0 0 24px; }
+.blog-index-year { margin: 0 0 35px; }
+.blog-index-year h2 { font-size: 20px; margin: 0 0 12px; }
+.blog-index-list { list-style: none; padding: 0; margin: 0; }
+.blog-index-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 7px 0; }
+.blog-index-list a { color: #111; text-decoration: none; }
+.blog-index-list a:hover,
+.blog-index-list a:focus-visible { color: #653CBE; text-decoration: underline; }
+.blog-index-date { color: #555; font-size: 14px; white-space: nowrap; }
+@media (max-width: 600px) {
+  .blog-index-list li { flex-direction: column; gap: 0; }
+}
