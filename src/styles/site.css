@@ -3,7 +3,9 @@
   font-family: Arial, Helvetica, sans-serif;
   color: #111;
   background: #fff;
-  --tab-width: 130px; /* Change this once to resize every navigation tab. */
+  /* Adjust these two values to resize all navigation tabs together. */
+  --tab-width: 130px;
+  --tab-height: 62px;
 }
 
 * { box-sizing: border-box; }
@@ -26,10 +28,13 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
 }
 
 .tabs a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 var(--tab-width);
+  height: var(--tab-height);
   text-align: center;
-  padding: 15px 12px 16px;
+  padding: 0 12px;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
@@ -96,7 +101,9 @@ body { margin: 0; background: #fff; color: #111; font-size: 17px; line-height: 1
   .tabs a {
     flex-basis: min(var(--tab-width), calc((100vw - 18px) / 4));
     font-size: 16px;
-    padding: 12px 0 13px;
+    /* Keep the mobile tabs slightly shorter, using the same height variable. */
+    height: calc(var(--tab-height) * 0.83);
+    padding: 0;
   }
   .page-content { padding: 38px 24px 70px; }
   .post-preview { margin-bottom: 66px; }
